@@ -14,7 +14,7 @@ import java.util.Iterator;
 public class TimeMeasurement {
 
     // where the data stored
-    private static final File FILE = new File("dataJW.xlsx");
+    private static final File FILE = new File("dataJWfix.xlsx");
     private static final int MAXIMUM = Integer.MAX_VALUE;
 
     // input :: city name

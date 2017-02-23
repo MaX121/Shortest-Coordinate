@@ -24,6 +24,8 @@ public class DistanceMeasurement {
     private static final File FILE = new File("dataJWfix.xlsx");
     private static final int MAXIMUM = Integer.MAX_VALUE;
 
+    private HashMap <String, String> eachCityName = new HashMap<>();
+
     // store the data
     private int totalTime = 0;
     private int totalDistance = 0;
@@ -246,44 +248,56 @@ public class DistanceMeasurement {
 
         }
 
-        // current city back to the distributor
-        // so we need to add some additional distance
-        // and set the current city into the distibutor
-
         route.put(current_city + " - " + first_city, Integer.parseInt(getValue(intersectPoint(current_city, first_city))));
         shortest_time.put(current_city + " - " + first_city, Integer.parseInt(timeMeasurement.getValue(intersectPoint(current_city, first_city))));
 
         // display the total distance from end to end delivery
+        for (Map.Entry<String, Integer> routeList : route.entrySet()) { totalDistance += routeList.getValue(); }
+        for (Map.Entry<String, Integer> timeList : shortest_time.entrySet()) { totalTime += timeList.getValue(); }
 
-        System.out.println();
+        // set the city name
+        eachCityName.put("C 11", "BT PN");
+        eachCityName.put("C 12", "Bu Ripto");
+        eachCityName.put("C 13", "Bu Endah");
+        eachCityName.put("C 14", "Bu Mamik");
+        eachCityName.put("C 15", "Bu Heni");
+        eachCityName.put("C 16", "Pak Mujiono");
+        eachCityName.put("C 17", "Mbak Ismi");
+        eachCityName.put("C 18", "Mbak Miranda");
+        eachCityName.put("C 19", "Happy Juice");
+        eachCityName.put("C 20", "Potong Rambut");
+        eachCityName.put("C 21", "Bu Sulami");
+        eachCityName.put("C 22", "Bu Wiwik");
+        eachCityName.put("C 23", "Ny. Suyatmin");
+        eachCityName.put("C 24", "Bu Yayuk");
+        eachCityName.put("C 25", "Bu Suhari");
+        eachCityName.put("C 26", "Bu Nita");
+        eachCityName.put("C 27", "Pak Adam");
+        eachCityName.put("C 28", "Bu Karni");
+        eachCityName.put("C 29", "Bu Sugiyem");
+        eachCityName.put("C 30", "Mbak Septi");
+        eachCityName.put("C 31", "Bu Surip");
+        eachCityName.put("C 32", "Bu Waluyo");
+        eachCityName.put("C 33", "Mas Ragil");
+        eachCityName.put("C 34", "Bu Jum");
+        eachCityName.put("C 35", "Bu Murni");
+        eachCityName.put("C 36", "Bu Maryani");
+        eachCityName.put("C 37", "Bu Sri Sukarti");
+        eachCityName.put("C 38", "Mas Damar");
+        eachCityName.put("C 39", "Bu Supardi");
+        eachCityName.put("C 40", "Pak Broto");
 
-        for (Map.Entry<String, Integer> routeList : route.entrySet()) {
-            totalDistance += routeList.getValue();
-            System.out.println(routeList.getKey() + " = " + routeList.getValue());
+        // separate the key into a single line
+        int index = 0;
+        String pathCrossed = "";
+        for (String eachCityTrack : route.keySet()) {
+            if (index == 0) { pathCrossed += "DIST"; }
+            else if (index != route.size()) { pathCrossed += " + " + eachCityName.get(eachCityTrack.split(" - ")[1]); }
+            index++;
         }
 
-        for (Map.Entry<String, Integer> timeList : shortest_time.entrySet()) {
-            totalTime += timeList.getValue();
-            System.out.println(timeList.getKey() + " = " + timeList.getValue());
-        }
-
-        System.out.println("Waktu total = " + totalTime);
-
-        // append the route to the text
-        for (Map.Entry <String, Integer> routeList : route.entrySet()) {
-            System.out.println(routeList.getKey() + " - " + routeList.getValue());
-            text += " " + routeList.getKey() + " - " + routeList.getValue() + "\n";
-        }
-
-        text += "\n";
-        for (Map.Entry <String, Integer> timeList : shortest_time.entrySet()) {
-            System.out.println(timeList.getKey() + " - " + timeList.getValue());
-            text += " " + timeList.getKey() + " - " + timeList.getValue() + "\n";
-        }
-
-        text += "\n Jarak total = " + totalDistance;
-        text += "\n Waktu total : " + totalTime ;
-        return text;
+        pathCrossed += " + DIST";
+        return pathCrossed;
 
     }
 }

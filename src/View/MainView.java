@@ -7,13 +7,17 @@ import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainView extends JFrame implements ActionListener {
 
     private JTextArea textArea;
     private JButton exitButton, processButton, howToUseButton;
     private ArrayList<JCheckBox> checkBoxes = new ArrayList<>();
+    private HashMap<String, String> changeName = new HashMap<>();
+    private ArrayList<JLabel> labelCollection = new ArrayList<>();
     private JCheckBox checkC11, checkC12, checkC13, checkC14, checkC15, checkC16, checkC17, checkC18, checkC19, checkC20, checkC21, checkC22, checkC23, checkC24, checkC25, checkC26, checkC27, checkC28, checkC29, checkC30, checkC31, checkC32, checkC33, checkC34, checkC35, checkC36, checkC37, checkC38, checkC39, checkC40;
     private JLabel labelC11, labelC12, labelC13, labelC14, labelC15, labelC16, labelC17, labelC18, labelC19, labelC20, labelC21, labelC22, labelC23, labelC24, labelC25, labelC26, labelC27, labelC28, labelC29, labelC30, labelC31, labelC32, labelC33, labelC34, labelC35, labelC36, labelC37, labelC38, labelC39, labelC40, titleLabel;
 
@@ -31,6 +35,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC11 = new JLabel("BT PN");
         labelC11.setBounds(60, 60, 250, 25);
         labelC11.setLabelFor(checkC11);
+        labelCollection.add(labelC11);
         add(labelC11);
 
         checkC11 = new JCheckBox();
@@ -43,6 +48,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC12 = new JLabel("Bu Ripto");
         labelC12.setBounds(60, 90, 250, 25);
         labelC12.setLabelFor(checkC12);
+        labelCollection.add(labelC12);
         add(labelC12);
 
         checkC12 = new JCheckBox();
@@ -54,7 +60,8 @@ public class MainView extends JFrame implements ActionListener {
 
         labelC13 = new JLabel("Bu Endah");
         labelC13.setBounds(60, 120, 250, 25);
-        labelC13.setLabelFor(checkC12);
+        labelC13.setLabelFor(checkC13);
+        labelCollection.add(labelC13);
         add(labelC13);
 
         checkC13 = new JCheckBox();
@@ -66,7 +73,8 @@ public class MainView extends JFrame implements ActionListener {
 
         labelC14 = new JLabel("Bu Mamik");
         labelC14.setBounds(60, 150, 250, 25);
-        labelC14.setLabelFor(checkC12);
+        labelC14.setLabelFor(checkC14);
+        labelCollection.add(labelC14);
         add(labelC14);
 
         checkC14 = new JCheckBox();
@@ -78,7 +86,8 @@ public class MainView extends JFrame implements ActionListener {
 
         labelC15 = new JLabel("Bu Heni");
         labelC15.setBounds(60, 180, 250, 25);
-        labelC15.setLabelFor(checkC12);
+        labelC15.setLabelFor(checkC15);
+        labelCollection.add(labelC15);
         add(labelC15);
 
         checkC15 = new JCheckBox();
@@ -91,6 +100,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC16 = new JLabel("Pak Mujiono");
         labelC16.setBounds(60, 210, 250, 25);
         labelC16.setLabelFor(checkC16);
+        labelCollection.add(labelC16);
         add(labelC16);
 
         checkC16 = new JCheckBox();
@@ -103,6 +113,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC17 = new JLabel("Mbak Ismi");
         labelC17.setBounds(60, 240, 250, 25);
         labelC17.setLabelFor(checkC17);
+        labelCollection.add(labelC17);
         add(labelC17);
 
         checkC17 = new JCheckBox();
@@ -115,6 +126,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC18 = new JLabel("Mbak Miranda");
         labelC18.setBounds(60, 270, 250, 25);
         labelC18.setLabelFor(checkC18);
+        labelCollection.add(labelC18);
         add(labelC18);
 
         checkC18 = new JCheckBox();
@@ -127,6 +139,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC19 = new JLabel("Happy Juice");
         labelC19.setBounds(60, 300, 250, 25);
         labelC19.setLabelFor(checkC19);
+        labelCollection.add(labelC19);
         add(labelC19);
 
         checkC19 = new JCheckBox();
@@ -139,6 +152,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC20 = new JLabel("Potong Rambut");
         labelC20.setBounds(60, 330, 250, 25);
         labelC20.setLabelFor(checkC20);
+        labelCollection.add(labelC20);
         add(labelC20);
 
         checkC20 = new JCheckBox();
@@ -151,6 +165,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC21 = new JLabel("Bu Sulami");
         labelC21.setBounds(290, 60, 250, 25);
         labelC21.setLabelFor(checkC21);
+        labelCollection.add(labelC21);
         add(labelC21);
 
         checkC21 = new JCheckBox();
@@ -163,6 +178,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC22 = new JLabel("Bu Wiwik");
         labelC22.setBounds(290, 90, 250, 25);
         labelC22.setLabelFor(checkC22);
+        labelCollection.add(labelC22);
         add(labelC22);
 
         checkC22 = new JCheckBox();
@@ -175,6 +191,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC23 = new JLabel("Ny Suyatmin");
         labelC23.setBounds(290, 120, 250, 25);
         labelC23.setLabelFor(checkC23);
+        labelCollection.add(labelC23);
         add(labelC23);
 
         checkC23 = new JCheckBox();
@@ -187,6 +204,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC24 = new JLabel("Bu Yayuk");
         labelC24.setBounds(290, 150, 250, 25);
         labelC24.setLabelFor(checkC24);
+        labelCollection.add(labelC24);
         add(labelC24);
 
         checkC24 = new JCheckBox();
@@ -199,6 +217,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC25 = new JLabel("Bu Suhari");
         labelC25.setBounds(290, 180, 250, 25);
         labelC25.setLabelFor(checkC25);
+        labelCollection.add(labelC25);
         add(labelC25);
 
         checkC25 = new JCheckBox();
@@ -211,6 +230,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC26 = new JLabel("Bu Nita");
         labelC26.setBounds(290, 210, 250, 25);
         labelC26.setLabelFor(checkC26);
+        labelCollection.add(labelC26);
         add(labelC26);
 
         checkC26 = new JCheckBox();
@@ -223,6 +243,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC27 = new JLabel("Pak Adam");
         labelC27.setBounds(290, 240, 250, 25);
         labelC27.setLabelFor(checkC27);
+        labelCollection.add(labelC27);
         add(labelC27);
 
         checkC27 = new JCheckBox();
@@ -235,6 +256,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC28 = new JLabel("Bu Karni");
         labelC28.setBounds(290, 270, 250, 25);
         labelC28.setLabelFor(checkC28);
+        labelCollection.add(labelC28);
         add(labelC28);
 
         checkC28 = new JCheckBox();
@@ -247,6 +269,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC29 = new JLabel("Bu Sugiyem");
         labelC29.setBounds(290, 300, 250, 25);
         labelC29.setLabelFor(checkC29);
+        labelCollection.add(labelC29);
         add(labelC29);
 
         checkC29 = new JCheckBox();
@@ -259,6 +282,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC30 = new JLabel("Mbak Septi");
         labelC30.setBounds(290, 330, 250, 25);
         labelC30.setLabelFor(checkC30);
+        labelCollection.add(labelC30);
         add(labelC30);
 
         checkC30 = new JCheckBox();
@@ -271,6 +295,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC31 = new JLabel("Bu Surip");
         labelC31.setBounds(490, 330, 250, 25);
         labelC31.setLabelFor(checkC31);
+        labelCollection.add(labelC31);
         add(labelC31);
 
         checkC31 = new JCheckBox();
@@ -283,6 +308,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC32 = new JLabel("Bu Waluyo");
         labelC32.setBounds(490, 60, 250, 25);
         labelC32.setLabelFor(checkC32);
+        labelCollection.add(labelC32);
         add(labelC32);
 
         checkC32 = new JCheckBox();
@@ -295,6 +321,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC33 = new JLabel("Mas Ragil");
         labelC33.setBounds(490, 90, 250, 25);
         labelC33.setLabelFor(checkC33);
+        labelCollection.add(labelC33);
         add(labelC33);
 
         checkC33 = new JCheckBox();
@@ -307,6 +334,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC34 = new JLabel("Bu Jum");
         labelC34.setBounds(490, 120, 250, 25);
         labelC34.setLabelFor(checkC34);
+        labelCollection.add(labelC34);
         add(labelC34);
 
         checkC34 = new JCheckBox();
@@ -319,6 +347,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC35 = new JLabel("Bu Murni");
         labelC35.setBounds(490, 150, 250, 25);
         labelC35.setLabelFor(checkC35);
+        labelCollection.add(labelC35);
         add(labelC35);
 
         checkC35 = new JCheckBox();
@@ -331,6 +360,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC36 = new JLabel("Bu Maryani");
         labelC36.setBounds(490, 180, 250, 25);
         labelC36.setLabelFor(checkC36);
+        labelCollection.add(labelC36);
         add(labelC36);
 
         checkC36 = new JCheckBox();
@@ -343,6 +373,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC37 = new JLabel("Bu Sri Sukarti");
         labelC37.setBounds(490, 210, 250, 25);
         labelC37.setLabelFor(checkC37);
+        labelCollection.add(labelC37);
         add(labelC37);
 
         checkC37 = new JCheckBox();
@@ -355,6 +386,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC38 = new JLabel("Mas Damar");
         labelC38.setBounds(490, 240, 250, 25);
         labelC38.setLabelFor(checkC38);
+        labelCollection.add(labelC38);
         add(labelC38);
 
         checkC38 = new JCheckBox();
@@ -367,6 +399,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC39 = new JLabel("Bu Supardi");
         labelC39.setBounds(490, 270, 250, 25);
         labelC39.setLabelFor(checkC39);
+        labelCollection.add(labelC39);
         add(labelC39);
 
         checkC39 = new JCheckBox();
@@ -379,6 +412,7 @@ public class MainView extends JFrame implements ActionListener {
         labelC40 = new JLabel("Pak Broto");
         labelC40.setBounds(490, 300, 250, 25);
         labelC40.setLabelFor(checkC40);
+        labelCollection.add(labelC40);
         add(labelC40);
 
         checkC40 = new JCheckBox();
@@ -431,7 +465,6 @@ public class MainView extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if (e.getSource() == exitButton) {
             System.exit(EXIT_ON_CLOSE);
         }
@@ -450,22 +483,24 @@ public class MainView extends JFrame implements ActionListener {
             // set the cityList value to perform the calc
             int nrofCity = 0;
             MainModal mainModal = new MainModal();
-            ArrayList <String> cityList = new ArrayList<>();
+            ArrayList<String> cityList = new ArrayList<>();
             for (JCheckBox visitedCity : checkBoxes) {
-                nrofCity++;
-                cityList.add(visitedCity.getToolTipText());
-                mainModal.addCity(visitedCity.getToolTipText(), 0);
+                if (visitedCity.isSelected()) {
+                    nrofCity++;
+                    cityList.add(visitedCity.getToolTipText());
+                    mainModal.addCity(visitedCity.getToolTipText(), 0);
+                }
             }
 
             try {
                 DistanceMeasurement distanceMeasurement = new DistanceMeasurement();
                 textArea.setText(distanceMeasurement.terpendek(cityList));
             } catch (Exception ex) {
+                ex.printStackTrace();
                 System.err.println("Something wrong");
                 System.err.println("Error message : " + ex.getMessage());
             }
-
         }
-
     }
+
 }
