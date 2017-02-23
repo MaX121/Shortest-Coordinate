@@ -21,7 +21,7 @@ public class DistanceMeasurement {
     TimeMeasurement timeMeasurement = new TimeMeasurement();
 
     // where the data stored
-    private static final File FILE = new File("dataJW.xlsx");
+    private static final File FILE = new File("dataJWfix.xlsx");
     private static final int MAXIMUM = Integer.MAX_VALUE;
 
     // store the data

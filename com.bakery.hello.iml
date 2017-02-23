@@ -63,8 +63,8 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="lib" level="project" />
-    <orderEntry type="library" name="poi-3" level="project" />
-    <orderEntry type="library" name="ooxml-lib" level="project" />
+    <orderEntry type="library" name="poi-3.14-20160307" level="project" />
+    <orderEntry type="library" name="commons-codec-1.10" level="project" />
+    <orderEntry type="library" name="curvesapi-1.03" level="project" />
   </component>
 </module>
