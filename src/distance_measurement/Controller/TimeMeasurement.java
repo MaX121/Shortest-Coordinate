@@ -89,6 +89,7 @@ public class TimeMeasurement {
     // a cell from an intersection two cell as a String variable
 
     public String intersectPoint(String where, String from) throws Exception {
+        System.out.println(where + " - " + from);
         String whereCell = cellCoordinate(where).replaceAll("[a-zA-Z]*", "");
         String fromCell = rowCoordinate(from).replaceAll("[0-9]*", "");
         return fromCell + whereCell;

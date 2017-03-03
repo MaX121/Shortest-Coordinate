@@ -7,13 +7,11 @@ import java.awt.Font;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainView extends JFrame implements ActionListener {
 
-    private JTextArea textArea;
     private JButton exitButton, processButton, howToUseButton;
     private ArrayList<JCheckBox> checkBoxes = new ArrayList<>();
     private HashMap<String, String> changeName = new HashMap<>();
@@ -28,8 +26,8 @@ public class MainView extends JFrame implements ActionListener {
 
         setLayout(null);
         setVisible(true);
-        setSize(955 , 510);
-        setTitle("PT. Roti Bakar");
+        setSize(630 , 510);
+        setTitle("Finnua Bakery");
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         labelC11 = new JLabel("BT PN");
@@ -42,7 +40,6 @@ public class MainView extends JFrame implements ActionListener {
         checkC11.setBounds(30,60, 30, 25);
         checkBoxes.add(checkC11);
         checkC11.setToolTipText("C 11");
-        checkC11.addActionListener(this);
         add(checkC11);
 
         labelC12 = new JLabel("Bu Ripto");
@@ -55,7 +52,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC12);
         checkC12.setToolTipText("C 12");
         checkC12.setBounds(30, 90, 30, 25);
-        checkC12.addActionListener(this);
         add(checkC12);
 
         labelC13 = new JLabel("Bu Endah");
@@ -68,7 +64,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC13);
         checkC13.setToolTipText("C 13");
         checkC13.setBounds(30, 120, 30, 25);
-        checkC13.addActionListener(this);
         add(checkC13);
 
         labelC14 = new JLabel("Bu Mamik");
@@ -81,7 +76,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC14);
         checkC14.setToolTipText("C 14");
         checkC14.setBounds(30, 150, 30, 25);
-        checkC14.addActionListener(this);
         add(checkC14);
 
         labelC15 = new JLabel("Bu Heni");
@@ -94,7 +88,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC15);
         checkC15.setToolTipText("C 15");
         checkC15.setBounds(30, 180, 30, 25);
-        checkC15.addActionListener(this);
         add(checkC15);
 
         labelC16 = new JLabel("Pak Mujiono");
@@ -107,7 +100,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC16);
         checkC16.setToolTipText("C 16");
         checkC16.setBounds(30, 210, 30, 25);
-        checkC16.addActionListener(this);
         add(checkC16);
 
         labelC17 = new JLabel("Mbak Ismi");
@@ -120,7 +112,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC17);
         checkC17.setToolTipText("C 17");
         checkC17.setBounds(30, 240, 30, 25);
-        checkC17.addActionListener(this);
         add(checkC17);
 
         labelC18 = new JLabel("Mbak Miranda");
@@ -133,7 +124,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC18);
         checkC18.setToolTipText("C 18");
         checkC18.setBounds(30, 270, 30, 25);
-        checkC18.addActionListener(this);
         add(checkC18);
 
         labelC19 = new JLabel("Happy Juice");
@@ -146,7 +136,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC19);
         checkC19.setToolTipText("C 19");
         checkC19.setBounds(30, 300, 30, 25);
-        checkC19.addActionListener(this);
         add(checkC19);
 
         labelC20 = new JLabel("Potong Rambut");
@@ -159,7 +148,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC20);
         checkC20.setToolTipText("C 20");
         checkC20.setBounds(30, 330, 30, 25);
-        checkC20.addActionListener(this);
         add(checkC20);
 
         labelC21 = new JLabel("Bu Sulami");
@@ -172,7 +160,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC21);
         checkC21.setToolTipText("C 21");
         checkC21.setBounds(260,60, 30, 25);
-        checkC21.addActionListener(this);
         add(checkC21);
 
         labelC22 = new JLabel("Bu Wiwik");
@@ -185,7 +172,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC22);
         checkC22.setToolTipText("C 22");
         checkC22.setBounds(260, 90, 30, 25);
-        checkC22.addActionListener(this);
         add(checkC22);
 
         labelC23 = new JLabel("Ny Suyatmin");
@@ -198,7 +184,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC23);
         checkC23.setToolTipText("C 23");
         checkC23.setBounds(260, 120, 30, 25);
-        checkC23.addActionListener(this);
         add(checkC23);
 
         labelC24 = new JLabel("Bu Yayuk");
@@ -211,7 +196,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC24);
         checkC24.setToolTipText("C 24");
         checkC24.setBounds(260, 150, 30, 25);
-        checkC24.addActionListener(this);
         add(checkC24);
 
         labelC25 = new JLabel("Bu Suhari");
@@ -224,7 +208,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC25);
         checkC25.setToolTipText("C 25");
         checkC25.setBounds(260, 180, 30, 25);
-        checkC25.addActionListener(this);
         add(checkC25);
 
         labelC26 = new JLabel("Bu Nita");
@@ -237,7 +220,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC26);
         checkC26.setToolTipText("C 26");
         checkC26.setBounds(260, 210, 30, 25);
-        checkC26.addActionListener(this);
         add(checkC26);
 
         labelC27 = new JLabel("Pak Adam");
@@ -250,7 +232,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC27);
         checkC27.setToolTipText("C 27");
         checkC27.setBounds(260, 240, 30, 25);
-        checkC27.addActionListener(this);
         add(checkC27);
 
         labelC28 = new JLabel("Bu Karni");
@@ -263,7 +244,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC28);
         checkC28.setToolTipText("C 28");
         checkC28.setBounds(260, 270, 30, 25);
-        checkC28.addActionListener(this);
         add(checkC28);
 
         labelC29 = new JLabel("Bu Sugiyem");
@@ -276,7 +256,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC29);
         checkC29.setToolTipText("C 29");
         checkC29.setBounds(260, 300, 30, 25);
-        checkC29.addActionListener(this);
         add(checkC29);
 
         labelC30 = new JLabel("Mbak Septi");
@@ -289,7 +268,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC30);
         checkC30.setToolTipText("C 30");
         checkC30.setBounds(260, 330, 30, 25);
-        checkC30.addActionListener(this);
         add(checkC30);
 
         labelC31 = new JLabel("Bu Surip");
@@ -302,7 +280,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC31);
         checkC31.setToolTipText("C 31");
         checkC31.setBounds(460, 330, 30, 25);
-        checkC31.addActionListener(this);
         add(checkC31);
 
         labelC32 = new JLabel("Bu Waluyo");
@@ -315,7 +292,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC32);
         checkC32.setToolTipText("C 32");
         checkC32.setBounds(460, 60, 30, 25);
-        checkC32.addActionListener(this);
         add(checkC32);
 
         labelC33 = new JLabel("Mas Ragil");
@@ -328,7 +304,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC33);
         checkC33.setToolTipText("C 33");
         checkC33.setBounds(460, 90, 30, 25);
-        checkC33.addActionListener(this);
         add(checkC33);
 
         labelC34 = new JLabel("Bu Jum");
@@ -341,7 +316,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC34);
         checkC34.setToolTipText("C 34");
         checkC34.setBounds(460, 120, 30, 25);
-        checkC34.addActionListener(this);
         add(checkC34);
 
         labelC35 = new JLabel("Bu Murni");
@@ -354,7 +328,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC35);
         checkC35.setToolTipText("C 35");
         checkC35.setBounds(460, 150, 30, 25);
-        checkC35.addActionListener(this);
         add(checkC35);
 
         labelC36 = new JLabel("Bu Maryani");
@@ -367,7 +340,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC36);
         checkC36.setToolTipText("C 36");
         checkC36.setBounds(460, 180, 30, 25);
-        checkC36.addActionListener(this);
         add(checkC36);
 
         labelC37 = new JLabel("Bu Sri Sukarti");
@@ -380,7 +352,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC37);
         checkC37.setToolTipText("C 37");
         checkC37.setBounds(460, 210, 30, 25);
-        checkC37.addActionListener(this);
         add(checkC37);
 
         labelC38 = new JLabel("Mas Damar");
@@ -393,7 +364,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC38);
         checkC38.setToolTipText("C 38");
         checkC38.setBounds(460, 240, 30, 25);
-        checkC38.addActionListener(this);
         add(checkC38);
 
         labelC39 = new JLabel("Bu Supardi");
@@ -406,7 +376,6 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC39);
         checkC39.setToolTipText("C 39");
         checkC39.setBounds(460, 270, 30, 25);
-        checkC39.addActionListener(this);
         add(checkC39);
 
         labelC40 = new JLabel("Pak Broto");
@@ -419,14 +388,13 @@ public class MainView extends JFrame implements ActionListener {
         checkBoxes.add(checkC40);
         checkC40.setToolTipText("C 40");
         checkC40.setBounds(460, 300, 30, 25);
-        checkC40.addActionListener(this);
         add(checkC40);
 
         // help button to view the basic documentation
         // this will popup a single window a basic instruction
 
         howToUseButton = new JButton("CARA MENGGUNAKAN");
-        howToUseButton.setBounds(30, 380, 430, 25);
+        howToUseButton.setBounds(30, 380, 555, 25);
         howToUseButton.addActionListener(this);
         howToUseButton.setToolTipText("Tutorial cara menggunakan");
         add(howToUseButton);
@@ -435,7 +403,7 @@ public class MainView extends JFrame implements ActionListener {
         // this is the default button on this view
 
         processButton = new JButton("PROSES DATA");
-        processButton.setBounds(30, 420, 200, 25);
+        processButton.setBounds(30, 420, 250, 25);
         processButton.addActionListener(this);
         processButton.setToolTipText("Proses data");
         add(processButton);
@@ -443,16 +411,10 @@ public class MainView extends JFrame implements ActionListener {
         // exit button to exit the apps
 
         exitButton = new JButton("EXIT");
-        exitButton.setBounds(260, 420, 200, 25);
+        exitButton.setBounds(335, 420, 250, 25);
         exitButton.addActionListener(this);
         exitButton.setToolTipText("Keluar dari aplikasi");
         add(exitButton);
-
-        textArea = new JTextArea();
-        textArea.setEditable(false);
-        textArea.setFont(new Font("Trebuchet MS", Font.PLAIN, 12));
-        textArea.setBounds(500, 60, 430, 385);
-        add(textArea);
 
     }
 
@@ -470,12 +432,10 @@ public class MainView extends JFrame implements ActionListener {
         }
 
         if (e.getSource() == howToUseButton) {
-            System.out.println("Tombol bantuan diklik");
             JOptionPane.showMessageDialog(null, "Cara Menggunakan" +
-                    "\n\n01. Berikan tanda centang pada kota yang diinginkan" +
-                    "\n02. Isikan jumlah roti yang hendak dikirikman pada kotak teks" +
-                    "\n03. Klik tombol PROSES DATA untuk menjalankan program" +
-                    "\n04. Hasil perhitungan akan muncul di kotak teks dibawah");
+                    "\n01. Berikan tanda centang pada kota yang diinginkan" +
+                    "\n02. Klik tombol PROSES DATA untuk menjalankan program" +
+                    "\n04. Route yang akan dilalui akan muncul pada kotak dialog");
         }
 
         if (e.getSource() == processButton) {
@@ -494,11 +454,14 @@ public class MainView extends JFrame implements ActionListener {
 
             try {
                 DistanceMeasurement distanceMeasurement = new DistanceMeasurement();
-                textArea.setText(distanceMeasurement.terpendek(cityList));
+                JOptionPane.showMessageDialog(null, distanceMeasurement.terpendek(cityList));
             } catch (Exception ex) {
                 ex.printStackTrace();
                 System.err.println("Something wrong");
                 System.err.println("Error message : " + ex.getMessage());
+                JOptionPane.showMessageDialog(null, "Something wrong");
+            } finally {
+                cityList.clear(); // clear all values caught in cityList ArrayList
             }
         }
     }

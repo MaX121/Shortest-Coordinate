@@ -87,6 +87,7 @@ public class DistanceMeasurement {
                 }
             }
         }
+
         workbook.close();
         return foundCell[1];
     }
@@ -98,8 +99,8 @@ public class DistanceMeasurement {
         String cellCoor = cellCoordinate(selected_cell);
         FileInputStream fileInputStream = new FileInputStream(FILE);
         XSSFWorkbook workbook = new XSSFWorkbook(fileInputStream);
-        workbook.close();
         CellReference cellReference = new CellReference(cellCoor);
+        workbook.close();
         return "AF" + cellReference.getCellRefParts()[1];
     }
 
@@ -185,11 +186,8 @@ public class DistanceMeasurement {
         // city will be crossed first
 
         for (int i = 0; i < cityList.size(); i++) {
-            if (getValue(distributor(cityList.get(i))) == "") {
-                distance_map.put(cityList.get(i), 0);
-            } else {
-                distance_map.put(cityList.get(i), Integer.parseInt(getValue(distributor(cityList.get(i)))));
-            }
+            if (getValue(distributor(cityList.get(i))) == "") { distance_map.put(cityList.get(i), 0); }
+            else { distance_map.put(cityList.get(i), Integer.parseInt(getValue(distributor(cityList.get(i))))); }
         }
 
         // add the shortest distributor to the arraylist
@@ -200,10 +198,7 @@ public class DistanceMeasurement {
         // continue the delivery
 
         int pointer = 0;
-        for (Map.Entry<String, Integer> eachCity : distance_map.entrySet()) {
-            actual_route.add(eachCity.getKey());
-        }
-
+        for (Map.Entry<String, Integer> eachCity : distance_map.entrySet()) { actual_route.add(eachCity.getKey()); }
         for (Map.Entry<String, Integer> cityMap : distance_map.entrySet()) {
 
             if (pointer == 0) {
@@ -234,6 +229,9 @@ public class DistanceMeasurement {
                 }
 
             } else {
+
+                String cityRoute = ""; // store the crossed route to reach the destination
+                for (int index = 0; index < cityList.size(); index++) { cityRoute += cityList.get(index) + " - "; }
 
                 // seek for the nearest city from the current city
                 // add the distance from current city to nearest city
@@ -291,12 +289,12 @@ public class DistanceMeasurement {
         int index = 0;
         String pathCrossed = "";
         for (String eachCityTrack : route.keySet()) {
-            if (index == 0) { pathCrossed += "DIST"; }
+            if (index == 0) { pathCrossed += "Distributor"; }
             else if (index != route.size()) { pathCrossed += " + " + eachCityName.get(eachCityTrack.split(" - ")[1]); }
             index++;
         }
 
-        pathCrossed += " + DIST";
+        pathCrossed += " + Distributor";
         return pathCrossed;
 
     }
