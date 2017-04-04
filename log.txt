@@ -1,0 +1,71 @@
+commit 0a652dad4ea88fd601d05fb83f2d6242251f14cf
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Wed Mar 22 18:02:57 2017 +0700
+
+    Fixing bug on distance cost
+
+commit 8b7e84d8742a82ec1987b085b939a4eada128b8e
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Mon Mar 20 13:18:02 2017 +0700
+
+    Fixing bugs
+
+commit 4423c43db3209a2151efebba98aa5b18cedfb186
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Tue Mar 14 18:36:20 2017 +0700
+
+    Debugging ...
+
+commit f3bf55976774d96d1685276df29a1f5b0aa3e779
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Tue Mar 14 11:06:05 2017 +0700
+
+    Fixing Pak Adam Coordinate
+
+commit 1f5a8590d1911c2dc1a9b8a720b07da283959552
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Tue Mar 14 10:59:19 2017 +0700
+
+    Fixing Pak Adam Coordinate
+
+commit f07889d977d082f567fe44aade5831edc747db2d
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Fri Mar 3 14:30:16 2017 +0700
+
+    Problem in Intersect Point things and CellReference point
+
+commit a873e6d5fe0d241b0e4ad1a5c3c845f5771f8815
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Fri Feb 24 18:44:13 2017 +0700
+
+    Finished Project
+
+commit e781caa60f45f9169cb32d430ff4b9eb146a61fe
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Fri Feb 24 10:17:07 2017 +0700
+
+    Adding library
+
+commit a55b56e044fab94e741caf346cc012fdb89f4108
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Thu Feb 23 22:19:08 2017 +0700
+
+    Fixing the algorithn
+
+commit 34bbe79d23106d873c0959a69efb4fde6bc017d5
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Thu Feb 23 20:00:08 2017 +0700
+
+    Fixed layout and only handle the function
+
+commit 06d250bf7c3420f2a688607c07ee04c1d61b5459
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Thu Feb 23 16:39:22 2017 +0700
+
+    Adding Apache POI and Updated Dataset
+
+commit c3a3179a6ffe03c8500409b8820d6970f8063046
+Author: Vinsen Muliadi <admin@max-metal.us>
+Date:   Mon Jan 30 20:03:39 2017 +0700
+
+    First commit

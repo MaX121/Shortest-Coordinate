@@ -286,26 +286,34 @@ public class DistanceMeasurement {
         cityName.put("C 39", "Bu Supardi");
         cityName.put("C 40", "Pak Broto");
 
+        int totalDistance = 0;
+        String actualRoute = "";
         String distanceCost = "";
         String latest_city = "";
         for (int routeIndex = 0; routeIndex < sorted.size(); routeIndex++) {
             if (routeIndex == 0) {
                 String first_city = sorted.get(routeIndex).split(" - ")[1];
                 int distance = Integer.parseInt(getValue(distributor(first_city)));
+                actualRoute += "Distributor - " + cityName.get(first_city);
                 distanceCost += "Distributor - " + cityName.get(first_city) + " : " + distance + "\n";
+                totalDistance += distance;
             } else if (routeIndex != 0 && routeIndex != sorted.size()-1) {
                 String first_city = sorted.get(routeIndex).split(" - ")[0];
                 String last_city = sorted.get(routeIndex).split(" - ")[1];
                 int distance = Integer.parseInt(getValue(intersectPoint(first_city, last_city)));
                 latest_city = last_city; // set the latest city that will back to the DIST
+                actualRoute += " - " + cityName.get(last_city);
                 distanceCost += cityName.get(first_city) + " - " + cityName.get(last_city) + " : " + distance + "\n";
+                totalDistance += distance;
             } else if (routeIndex == sorted.size()-1) {
                 int distance = Integer.parseInt(getValue(distributor(latest_city)));
+                actualRoute += " - Distributor";
                 distanceCost += cityName.get(latest_city) + " - Distributor : " + distance + "\n";
+                totalDistance += distance;
             }
         }
 
-        return distanceCost;
+        return actualRoute + " = " + totalDistance;
 
     }
 
