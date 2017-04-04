@@ -47,8 +47,6 @@ public class MainModal {
 
                 carBreadTransport.put(carTransport.getKey(), nrofCarEachCity);
             }
-
         }
     }
-
 }
