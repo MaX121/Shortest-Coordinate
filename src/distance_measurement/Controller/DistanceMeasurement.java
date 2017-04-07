@@ -327,8 +327,7 @@ public class DistanceMeasurement {
         } */
 
         System.out.println(routes);
-        // return routes + " = "  + distanceTotal;
-        return null;
+        return routes + " = "  + distanceTotal;
 
     }
 
